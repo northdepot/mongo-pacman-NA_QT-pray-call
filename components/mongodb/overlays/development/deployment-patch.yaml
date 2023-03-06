@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: mongodb
+  namespace: user1-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/jduimovich0/mongo-backend@sha256:76a6aa9f31c54caaa53a136a43ded82a93c2aade14ab3c9667cb1fadb5691a82
+        name: container-image
+        resources: {}
+status: {}
